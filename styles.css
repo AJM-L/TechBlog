@@ -1,0 +1,23 @@
+h2.nav {
+    text-align: center;
+
+}
+a.nav{
+    transition:250ms;
+}
+a.nav:link,
+a.nav:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 5px;
+}
+a.nav:hover,
+a.nav:active {
+  background-color: green;
+  color: white;
+}
