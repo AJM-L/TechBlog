@@ -1,23 +1,50 @@
-h2.nav {
-    text-align: center;
+body{
+  margin: 0px;
+}
+p {
+  margin-left: 5px;
+}
+h1 {
+  text-align:center;
+}
+div.header {
+  height: 50px;
+  
 
 }
+div.nav {
+    display: block;
+    background-color: black;
+    text-wrap: nowrap;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+}
+
 a.nav{
     transition:250ms;
+    position: realtive;
+    text-align: left;
 }
+
 a.nav:link,
 a.nav:visited {
   background-color: white;
   color: black;
-  border: 2px solid green;
+  border: 2px solid black;
   padding: 10px 20px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   margin: 5px 5px;
+  border-radius: 10px;
 }
 a.nav:hover,
 a.nav:active {
-  background-color: green;
+  background-color: black;
   color: white;
+}
+
+.headshot {
+  margin-left: 5px;
 }
