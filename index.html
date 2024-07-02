@@ -2,21 +2,72 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="AJs Website and Blog">
         <title>Home</title>
         <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --posX:0px;
+            --posY:0px;
+            --darkness: rgba(0, 0, 0, 0);
+            --blackTransparent: rgba(0, 0, 0, 1);
+            --blackOpaque: rgba(0, 0, 0, 0);
+        }
+        .overlayDarkness {
+  position: absolute;
+  top:0;
+  height: 110%;
+  width: 110%;
+  background: black;
+  z-index: 110;
+  background: radial-gradient(circle at var(--posX) var(--posY), rgba(0, 0, 0, 0) 0%, var(--darkness)30%);
+  pointer-events: none;
+
+}
+    </style>
+    <script type="text/javascript">
+        var r = document.querySelector(':root');
+        onmousemove = function(e){
+        var r = document.querySelector(':root');
+        var posX = e.clientX;
+        var posY = e.clientY;
+        r.style.setProperty('--posX', "" + posX + "px");
+        r.style.setProperty('--posY', "" + posY + "px");
+    }
+        </script>
+    
+
     </head>
     <body>
+        <script>
+            function toggleLights(){
+                var r = document.querySelector(':root');
+                var rs = getComputedStyle(r);
+                console.log(rs.getPropertyValue('--darkness'))
+                if (rs.getPropertyValue('--darkness') == rs.getPropertyValue('--blackTransparent')){
+                    r.style.setProperty('--darkness', rs.getPropertyValue('--blackOpaque'));
+                } else {
+                    r.style.setProperty('--darkness', rs.getPropertyValue('--blackTransparent'));
+                }
+            }
+                </script>
+            <div id="mobile-header"></div>
         <div class="nav">
             <a class="nav" href="index.html">Home</a><a
                 class="nav" href="About.html">About</a><a class="nav"
-                href="Articles.html">Articles</a></div>
-        <div class="header"></div>
-        <h1>Home</h1>
-        <img src="images/Headshot.JPG" style="width:216px;height:324px;"
-            class="headshot" alt="An image of AJ Matheson-Lieber">
-        <p>Welcome to my blog</p>
-        <p>My name is AJ Matheson-Lieber and I am a computer science student at Claremont McKenna College. Within this website, I plan to showcase my CS journey (and hopefully improve my HTML/CSS) and talk about new technology, papers, and discoveries.</p>
+                href="Articles.html">Articles</a>
+            <h2 class="name">AJ Matheson-Lieber</h2></div>
+        <div class="header"></div></div>
+        <div class="container"><img id ="imageHeader" class= "imageHead" src="/images/OldandNew.png" alt="Digital Collage"> 
+
+            <button class="imageHeadOverlay" onclick="toggleLights()">Lights</button></div>
+        <h1>Welcome!</h1>
+        <p style="margin: 20px 20px;">I am proud to say that this website represents my first step into HTML, CSS, and Javascript. I made it mostly to test my web design and developement skills before I embark on making a more fully fleshed portfolio site and to post some blog style content as well. I had a lot of fun figuring out how to program in HTML, CSS, and JS through this project, and I hope that you enjoy.</p>
+
+    <div class="overlayDarkness">
+    </div>
     </body>
+
+    
 </html>

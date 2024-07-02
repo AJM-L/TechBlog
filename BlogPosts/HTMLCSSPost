@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML/CSS Blog Post</title>
+        <title>HTML/CSS</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h2 class="nav"><a class="nav" href="index.html">Home</a><a class="nav"
-                href="About.html">About</a><a class="nav"
-                href="Articles.html">Articles</a></h2>
+        <div class="nav">
+            <a class="nav" href="index.html">Home</a><a
+                class="nav" href="About.html">About</a><a class="nav"
+                href="Articles.html">Articles</a></div>
+        <div class="header"></div>
     </body>
 
 </html>

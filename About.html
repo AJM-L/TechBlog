@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2 class="nav"><a class="nav" href="index.html">Home</a><a class="nav" href="About.html">About</a><a class="nav" href="Articles.html">Articles</a></h2>
+    <div id="mobile-header"></div>
+    <div class="nav">
+        <a class="nav" href="index.html">Home</a><a
+            class="nav" href="About.html">About</a><a class="nav"
+            href="Articles.html">Articles</a><h2 class="name">AJ Matheson-Lieber</h2></div>
+    <div class="header"></div>
     <h1>About</h1>
+    <div class = "headshot">
+        <img src="images/Headshot.JPG"
+            class="headshot" alt="An image of AJ Matheson-Lieber" usemap="#headshotmap">
+            <map name="headshotmap">
+                <area shape="circle" coords="180,180,44" href="About.html" onclick="clickMe()">
+              </map>
+              <script>
+              function clickMe() {
+                alert("Stop touching me!");
+              }
+              </script>
+        </div><div class = "introduction">
+        
+        <p class="introduction">&emsp; My name is
+            AJ Matheson-Lieber and I am a Computer Science student at
+            Claremont
+            McKenna College. Within this website, I plan to showcase my CS
+            journey (and hopefully improve my HTML/CSS) and talk about new
+            technology, papers, discoveries, etc.</p>
+
+    
+
 </body>
 </html>

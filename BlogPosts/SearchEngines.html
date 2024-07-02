@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML/CSS</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <div id="mobile-header"></div>
+        <div class="nav">
+            <a class="nav" href="../index.html">Home</a><a
+                class="nav" href="../About.html">About</a><a class="nav"
+                href="../Articles.html">Articles</a>
+            <h2 class="name">AJ Matheson-Lieber</h2></div>
+        <div class="header"></div>
+        <h1 id="heading">Search Engines</h1>
+        
+        <script type="module">
+            import {articles} from "./Articles.js";
+            let text = "<div class = 'articleList_c'> <h2 class='articleList_c'>Articles</h2>";
+            for (let i = 0; i< articles.length; i++){
+                text += "<a class = 'articleList_c' href= '" + articles[i][0] + "'>" + articles[i][1] + "</a>";
+            }
+            text += "</div>";
+            document.getElementById("articlesJS").innerHTML = text;
+        </script>
+        <script>
+            export function getArticle() {
+                return document.getElementById("article");
+            }
+        </script>
+        <p class="article"> 
+            &emsp; Search engines are vital systems for accessing information
+            across the internet. They allow users to easily access information
+            and facilitate users navigation through huge databases. The amount
+            of information stored on the internet is unimaginably large and
+            increasing everyday. How is it possible that a user can type in a
+            few keywords to google, and parse relevant information from over
+            100,000,000 gigabytes of data? And how can we use our knowledge of
+            search engines to create more accessible websites?<br>
+            &emsp; Search engines like google, have three main stages/components
+            to supply results. The first stage uses crawlers to search the
+            internet, downloading text, images, and videos, and traversing
+            through links to automatically find new pages from old ones. These
+            bots provide the data for the next stage which is the indexing
+            stage. The index is a huge database used to store the information
+            and links found by the crawlers. Finally, there is the serving stage
+            where the search engine takes in your search parameters, ranks
+            results, and serves them to your browser. These three systems work
+            together to make searching the internet easy, fast, and accurate.
+            <br>
+            &emsp;
+        </p>
+        <img src="/images/SearchEngines.png" alt="Google hame" class="article">
+        <p id="articlesJS" class="articleList_c"></p>
+    </body>
+
+</html>

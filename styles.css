@@ -1,30 +1,239 @@
-body{
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+body {
   margin: 0px;
+  background-color: #fff6db;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+div.header {
+  height: 50px;
+}
+#mobile-header {
+  height:50px;
+}
+
+.name {
+  position: fixed;
+  margin: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 10px;
+  color: white;
+  z-index: 10;
+  text-wrap: nowrap;
+  
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top:0px;
+  background-color: black;
+
+}
+
+
+div.nav {
+  background-color: black;
+  position: relative;
+  height:max-content;
+  padding: 5px;
+}
+
+a.nav {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: 250ms;
+  position: relative;
+  
+}
+
+a.nav:link,
+a.nav:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+a.nav:hover,
+a.nav:active {
+  background-color: black;
+  color: white;
+}
+
+.imageHead {
+  margin: auto;
+  width: 100%;
+  top: 50px;
+}
+.imageHeadOverlay {
+  position: absolute;
+  size: 100px;
+  margin: 10px 10px;
+  top: 200px;
+  left: 10px;
+  z-index: 10;
+}
+
+h1 {
+  text-align: center;
+}
+img.headshot {
+  display: block;
+  width:90%;
+  margin: auto;
+  border-radius: 100px;
+}
+
+p.introduction {
+  margin: 10px 10px;
+}
+
+div.articleList_c {
+  position:absolute;
+  height:max-content;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  float: left;
+  padding: 5px;
+  background-color: #8f9396;
+  border-radius: 5px;
+
+}
+div.articleList {
+  position: relative;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #7d8d96;
+}
+
+div.articleList:hover { 
+  box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5); 
+} 
+img.articleList {
+  height: 180px;
+  width: 300px;
+  object-fit: cover;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: auto;
+  z-index: 1;
+}
+
+h2.articleList {
+  text-align: center;
+  margin:5px 5px;
+  
+}
+
+p.articleList {
+  margin: 10px 10px;
+  height: 145px;
+  white-space:inherit;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+a.articleList {
+  color: black;
+}
+
+div.articleList_c {
+  position:absolute;
+  height:max-content;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  float: left;
+  padding: 5px;
+  background-color: #8f9396;
+  border-radius: 5px;
+
+}
+
+a.articleList_c {
+  display: block;
+  background-color: #8f9396;
+  border-radius: 3px;
+  text-decoration: none;
+  color: black;
+  margin: 2px 0px;
+
+}
+a.articleList_c:hover { 
+  box-shadow: 2px 2px 4px rgba(36, 36, 36, 0.5); 
+} 
+
+h2.articleList_c {
+  margin: auto;
+  margin-bottom:5px;
+}
+p.article {
+  width:90%;
+  margin: auto;
+  font-size: 20px;
+  background-color: #deb583;
+  border-radius: 5px;
+  padding-left:1%;
+  padding-right: 1%;
+}
+
+img.article {
+  width:90%;
+  display:block;
+  margin: 10px auto;
+}
+
+}
+
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+body {
+  margin: 0px;
+  background-color: #e3e0d5;
+  overflow-x: hidden;
 }
 p {
   margin-left: 5px;
 }
 h1 {
-  text-align:center;
+  text-align: center;
+  margin: 10px 5px;
 }
 div.header {
   height: 50px;
-  
-
 }
 div.nav {
-    display: block;
-    background-color: black;
-    text-wrap: nowrap;
-    box-sizing: border-box;
-    position: fixed;
-    width: 100%;
+  display: block;
+  background-color: black;
+  text-wrap: nowrap;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
 }
 
-a.nav{
-    transition:250ms;
-    position: realtive;
-    text-align: left;
+a.nav {
+  transition: 250ms;
+  position: relative;
+  text-align: left;
 }
 
 a.nav:link,
@@ -44,7 +253,165 @@ a.nav:active {
   background-color: black;
   color: white;
 }
+.imageHead {
+  width: 100%;
+}
+.container{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.imageHeadOverlay {
+  position: absolute;
+  size: 100px;
+  margin: 10px 10px;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+div.headshot {
+  margin: auto;
+  float: left;
+  width: 50%;
+}
 
-.headshot {
-  margin-left: 5px;
+img.headshot {
+  display: block;
+  margin: auto;
+  margin-top: 0px;
+  width: 90%;
+}
+
+div.introduction {
+  margin: auto;
+  float: right;
+  width: 50%;
+}
+
+p.introduction {
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+.name {
+  width: 50%;
+  color: white;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  margin: auto;
+  text-align: right;
+}
+
+div.articleList {
+  margin: auto;
+  width: 25%;
+  float: left;
+  text-align: left;
+}
+a.articleList {
+  color: black;
+}
+
+p.article {
+  width:73%;
+  float: right;
+  margin: auto;
+  margin-right:20px;
+  font-size: 20px;
+  background-color: #deb583;
+  border-radius: 5px;
+  padding-left:1%;
+  padding-right: 1%;
+}
+
+img.article {
+  width:75%;
+  float: right;
+  margin: 10px 0;
+  margin-right:20px;
+}
+
+div.article {
+}
+
+div.articleList {
+  position: relative;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #7d8d96;
+}
+
+div.articleList:hover { 
+  box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5); 
+} 
+img.articleList {
+  height: 180px;
+  width: 300px;
+  object-fit: cover;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: auto;
+  z-index: 1;
+}
+
+h2.articleList {
+  text-align: center;
+  margin:5px 5px;
+}
+
+p.articleList {
+  margin: 10px 10px;
+  height: 145px;
+  white-space:inherit;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+div.articleList_c {
+  position:absolute;
+  height:max-content;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  float: left;
+  padding: 5px;
+  background-color: #8f9396;
+  border-radius: 5px;
+
+}
+
+a.articleList_c {
+  display: block;
+  background-color: #8f9396;
+  border-radius: 3px;
+  text-decoration: none;
+  color: black;
+  margin: 2px 0px;
+
+}
+a.articleList_c:hover { 
+  box-shadow: 2px 2px 4px rgba(36, 36, 36, 0.5); 
+} 
+
+h2.articleList_c {
+  margin: auto;
+  margin-bottom:5px;
+}
+
+#heading {
+  width: 75%;
+  float: right;
+  margin-left:0;
+  margin-right: 20px;
+}
+
 }
