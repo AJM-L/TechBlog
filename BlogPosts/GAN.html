@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML/CSS</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <div id="mobile-header"></div>
+
+        <div class="nav">
+            <a class="nav" href="../index.html">Home</a><a
+                class="nav" href="../About.html">About</a><a class="nav"
+                href="../Articles.html">Articles</a>
+            <h2 class="name">AJ Matheson-Lieber</h2></div>
+        <div class="header"></div>
+        <h1 id="heading">Generative Adversarial Networks</h1>
+        <script type="module">
+            import {articles} from "./Articles.js";
+            let text = "<div class = 'articleList_c'> <h2 class='articleList_c'>Articles</h2>";
+            for (let i = 0; i< articles.length; i++){
+                text += "<a class = 'articleList_c' href= '" + articles[i][0] + "'>" + articles[i][1] + "</a>";
+            }
+            text += "</div>";
+            document.getElementById("articlesJS").innerHTML = text;
+        </script>
+        <script>
+            export function getArticle() {
+                return document.getElementById("article");
+            }
+        </script>
+
+        <div class="article">
+            <p class="article"> &emsp; Generative Adversarial Networks or GANs
+                are a structure of neural networks used to create realistic
+                synthetic data. They work by pitting two networks against
+                eachother in a game where one network, the generator produces a
+                fake image which is fed to the discriminator who returns the
+                probability that the image is real. It is the goal of the
+                generator to trick the discriminator by producing more and more
+                realistic images, and it is the goal of the discriminator to
+                accurately tell fake images from real ones. The competition
+                between these two models allows the generator to produce
+                realistic looking data from a provided dataset and some random
+                noise. GANs are the models behind many contemporary generative
+                tools, and are incredible complex and interesting generative systems.</p>
+            <p id="articlesJS" class="articleList_c"></p>
+        </body>
+
+    </html>
